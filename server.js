@@ -35,6 +35,12 @@ app.get('/About',(req,res)=>{
   });
 });
 
+app.get('/About',(req,res)=>{
+  res.render('project.hbs',{
+    pageTitle:'Project Page',
+    currentYear: new Date().getFullYear()
+  });
+});
 app.get('/Bad',(req,res)=>{
   res.send({
     ErrorMessage:'The link does not exist',
